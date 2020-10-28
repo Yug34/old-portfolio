@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <title>Portfolio</title>
+    <!----
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    --->
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/arrow.css" />
+    <link rel="stylesheet" href="css/scrollbar.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+  </head>
+
+  <body>
+    <!------ Nav bar ---->
+    <nav class="nav">
+      <div class="container">
+        <div class="logo">
+          <a href="#">Yug</a>
+        </div>
+        <div class="main_list" id="mainListDiv">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Experience</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="media_button">
+          <button class="main_media_button" id="mediaButton">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-------- Home Page ------->
+    <div id="home">
+      <div class="bg-text">
+        <h1 id="typeName"></h1>
+        <div style="margin-top: 20px;">
+          <div id="typeDescription" style="display: inline;"></div>
+        </div>
+      </div>
+      <a
+        class="arrow-up"
+        style="
+          position: absolute;
+          top: 50%;
+          margin-left: 90vw;
+          transform: rotate(90deg);
+        "
+      >
+        <span class="left-arm"></span>
+        <span class="right-arm"></span>
+        <span class="arrow-slide"></span>
+      </a>
+    </div>
+
+
+<!--<p style="position:absolute; top: 90%; margin-left: 40%; color: white">Home</p>-->
+<!--<p style="position:absolute; top: 90%; margin-left: 45%; color: white">Projects</p>-->
+<!--<p style="position:absolute; top: 90%; margin-left: 50%; color: white">Research</p>-->
+<!--<p style="position:absolute; top: 90%; margin-left: 55%; color: white">Experience</p>-->
+<!--<p style="position:absolute; top: 90%; margin-left: 60%; color: white">Contact</p>-->
+
+
+    <!--- <div id="projects"></div> --->
+  </body>
+  <script>
+    // if no Webkit browser
+    (function () {
+      let isChrome =
+        /Chrome/.test(navigator.userAgent) &&
+        /Google Inc/.test(navigator.vendor);
+      let isSafari =
+        /Safari/.test(navigator.userAgent) &&
+        /Apple Computer/.test(navigator.vendor);
+      let scrollbarDiv = document.querySelector(".scrollbar");
+      if (!isChrome && !isSafari) {
+        scrollbarDiv.innerHTML = "You need Webkit browser to run this code";
+      }
+    })();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <script>
+    var mainListDiv = document.getElementById("mainListDiv"),
+      mediaButton = document.getElementById("mediaButton");
+
+    mediaButton.onclick = function () {
+      "use strict";
+      mainListDiv.classList.toggle("show_list");
+      mediaButton.classList.toggle("active");
+    };
+  </script>
+  <script src="src/slick.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/pts/0.9.5/pts.min.js"
+    integrity="sha512-cE6v1dThiaCYgfCJH2aujwMEFhjoFtEE77Ztc5D5jyg9DRF32BMObBjS3JaJac80wiTli8ERScHOtJ8MOhlNBg=="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
+    integrity="sha512-yNJzAsg5JyP91u+sLHlUDULMBd3hmEiVkYeeN1cQBKaLZ7EyT6oH2u5THNIRM2Fu6VKcZJv+F/QAp1h/qzy9Ow=="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.19/vanta.waves.min.js"
+    integrity="sha512-5Z6MX+bg1cXjpzp525buoUftDnthsPwhH9FGkacNVdkNR/sZvxDMo2kd/RRrCARwuupd0qGnNjPRjWLGYw7AOw=="
+    crossorigin="anonymous"
+  ></script>
+  <script src="src/vantaWaves.js"></script>
+  <script src="src/typed.js"></script>
+  <script src="src/index.js"></script>
+</html>
