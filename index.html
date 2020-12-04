@@ -15,68 +15,109 @@
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/arrow.css" />
     <link rel="stylesheet" href="css/scrollbar.css" />
-    <link rel="stylesheet" href="css/projects.css" />
     <link rel="stylesheet" href="css/slick.css" />
   </head>
 
   <body>
     <!------ Nav bar ---->
-    <nav class="nav">
-      <div class="container">
-        <div class="logo">
-          <a href="#">Yug</a>
-        </div>
-        <div class="main_list" id="mainListDiv">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Experience</a></li>
-            <li><a href="#">Education</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-        <div class="media_button">
-          <button class="main_media_button" id="mediaButton">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </nav>
+<!--    <nav class="nav">-->
+<!--      <div class="container">-->
+<!--        <div class="logo">-->
+<!--          <a href="#">Yug</a>-->
+<!--        </div>-->
+<!--        <div class="main_list" id="mainListDiv">-->
+<!--          <ul>-->
+<!--            <li><a href="#">Home</a></li>-->
+<!--            <li><a href="#">Projects</a></li>-->
+<!--            <li><a href="#">Experience</a></li>-->
+<!--            <li><a href="#">Education</a></li>-->
+<!--            <li><a href="#">Contact</a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--        <div class="media_button">-->
+<!--          <button class="main_media_button" id="mediaButton">-->
+<!--            <span></span>-->
+<!--            <span></span>-->
+<!--            <span></span>-->
+<!--          </button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </nav>-->
 
-    <!-------- Home Page ------->
-    <div id="home">
-      <div class="bg-text">
-        <h1 id="typeName"></h1>
-        <div style="margin-top: 20px;">
-          <div id="typeDescription" style="display: inline;"></div>
+    <div id="main">
+    </div>
+
+    <div id="slideContainer">
+      <div class="slideshow">
+
+          <div id="home">
+            <div class="bg-text">
+              <h1 id="typeName"></h1>
+              <div style="margin-top: 2vh;">
+                <div id="typeDescription" style="display: inline;"></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="projects">
+            <div class="bg-text">
+              Projects!
+            </div>
+          </div>
+
+
+          <div id="experience">
+            <div class="bg-text">
+              experience!
+            </div>
+          </div>
+
+
+          <div id="education">
+            <div class="bg-text">
+              Education!
+            </div>
+          </div>
+
+
+          <div id="contact">
+            <div class="bg-text">
+              contact!
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+    <div id="wrapper">
+      <div id="slidebar">
+        <div class="slider">
+          <div>Home</div>
+          <div>Projects</div>
+          <div>Experience</div>
+          <div>Education</div>
+          <div>Contact</div>
         </div>
       </div>
-      <a
-        class="arrow-up"
-        style="
-          position: absolute;
-          top: 50%;
-          margin-left: 90vw;
-          transform: rotate(90deg);
-        "
-      >
+    </div>
+
+    <div id="nextArrow" style="">
+      <a class="arrow-up" style="position: absolute; top: 40vh; margin-left: 90vw; transform: rotate(90deg);">
+        <span class="left-arm"></span>4
+        <span class="right-arm"></span>
+        <span class="arrow-slide"></span>
+      </a>
+    </div>
+
+    <div id="prevArrow">
+      <a class="arrow-up" style="position: absolute; top: 40vh; margin-right: 90vw; transform: rotate(-90deg);">
         <span class="left-arm"></span>
         <span class="right-arm"></span>
         <span class="arrow-slide"></span>
       </a>
     </div>
 
-
-<!--<p style="position:absolute; top: 90%; margin-left: 40%; color: white">Home</p>-->
-<!--<p style="position:absolute; top: 90%; margin-left: 45%; color: white">Projects</p>-->
-<!--<p style="position:absolute; top: 90%; margin-left: 50%; color: white">Research</p>-->
-<!--<p style="position:absolute; top: 90%; margin-left: 55%; color: white">Experience</p>-->
-<!--<p style="position:absolute; top: 90%; margin-left: 60%; color: white">Contact</p>-->
-
-
-    <!--- <div id="projects"></div> --->
   </body>
   <script>
     // if no Webkit browser
@@ -123,4 +164,25 @@
   <script src="src/vantaWaves.js"></script>
   <script src="src/typed.js"></script>
   <script src="src/index.js"></script>
+  <script>
+    $(document).ready(() => {
+      $('#slideContainer .slideshow').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '#slidebar .slider'
+      });
+      $('#slidebar .slider').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        asNavFor: '#slideContainer .slideshow',
+        centerMode: true,
+        arrows: true,
+        focusOnSelect: true,
+        nextArrow: document.getElementById('nextArrow'),
+        prevArrow: document.getElementById('prevArrow'),
+      });
+    });
+  </script>
 </html>

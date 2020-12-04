@@ -1,5 +1,5 @@
 VANTA.WAVES({
-  el: "#home",
+  el: "#main",
   mouseControls: true,
   touchControls: true,
   gyroControls: false,
