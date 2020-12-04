@@ -167,16 +167,11 @@
 }
 
 .scroll-up {
-    margin-left: -100px;
-}
-
-.arrow-up {
-    margin-left: 100px;
-}
-
-.arrow-up,
-.scroll-up {
     position: fixed;
+    margin-left: -100px;
     top: 200px;
 }
 
+.arrow-up {
+    position: fixed;
+}
