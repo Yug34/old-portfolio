@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 .container {
+    margin: 10px auto;
     position: relative;
     display: flex;
     justify-content: center;
@@ -14,18 +15,31 @@
     position: relative;
     width: 300px;
     height: 400px;
-    margin: 40px;
+    margin: 40px 50px;
     background: transparent;
     border: white 1px solid;
     transform-style: preserve-3d;
 }
 
 .container .box::before {
-    content: 'NIKE';
+    /*content: 'NIKE';*/
     position: absolute;
     top: 20px;
     left: 20px;
-    font-size: 6em;
+    font-size: 4em;
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .box::after {
+    /*content: 'SHOES';*/
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 4em;
     font-weight: 900;
     color: #fff;
     font-style: italic;
@@ -41,17 +55,20 @@
     content: "BOT"
 }
 
-.container .box::after {
-    content: 'SHOES';
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    font-size: 5em;
-    font-weight: 900;
-    color: #fff;
-    font-style: italic;
-    opacity: 0;
-    transition: 0.5s;
+#box2::before {
+    content: "CRUD";
+}
+
+#box2::after {
+    content: "API";
+}
+
+#box3::before {
+    content: "";
+}
+
+#box3::after {
+    content: "";
 }
 
 .container .box:hover::before, .container .box:hover::after {
@@ -77,6 +94,8 @@
 }
 
 .container .box .buy {
+    margin-right: auto;
+    margin-left: 0;
     position: absolute;
     bottom: 0;
     left: 50px;
@@ -86,6 +105,7 @@
     background: transparent;
     padding: 10px 25px;
     border-radius: 30px;
+    border: white 1px solid;
     text-decoration: none;
     transition: 0.5s;
     opacity: 0;
