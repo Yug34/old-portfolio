@@ -7,12 +7,13 @@
       crossorigin="anonymous"
     ></script>
     <meta charset="UTF-8" />
-    <title>Portfolio</title>
+    <title>Yug Gajjar</title>
     <!----
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     --->
     <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
+<!--    <link rel="stylesheet" href="css/navbar.css" />-->
+    <link rel="stylesheet" href="css/projects.css" />
     <link rel="stylesheet" href="css/arrow.css" />
     <link rel="stylesheet" href="css/scrollbar.css" />
     <link rel="stylesheet" href="css/slick.css" />
@@ -54,18 +55,25 @@
             <div class="bg-text">
               <h1 id="typeName"></h1>
               <div style="margin-top: 2vh;">
-                <div id="typeDescription" style="display: inline;"></div>
+                <div id="bruh" data-tilt>
+                  <div id="typeDescription" style="display: inline;"></div>
+                </div>
               </div>
             </div>
           </div>
 
-
           <div id="projects">
             <div class="bg-text">
-              Projects!
+              <div class="container">
+                <div class="box" id="box1">
+                  <h2 class="name">AllBOT</h2>
+                  <a href="#" class="buy">View source</a>
+                  <div class="circle"></div>
+                  <img src="images/discord.png" href="#" class="product"/>
+                </div>
+              </div>
             </div>
           </div>
-
 
           <div id="experience">
             <div class="bg-text">
@@ -118,6 +126,8 @@
       </a>
     </div>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
   </body>
   <script>
     // if no Webkit browser
@@ -134,6 +144,17 @@
       }
     })();
   </script>
+
+  <script src="src/vanilla-tilt.min.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".box"), {
+      max: 25,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.2,
+    });
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
   <script>
     var mainListDiv = document.getElementById("mainListDiv"),
@@ -184,5 +205,8 @@
         prevArrow: document.getElementById('prevArrow'),
       });
     });
+  </script>
+  <script>
+    const tilt = $("#bruh").tilt();
   </script>
 </html>
