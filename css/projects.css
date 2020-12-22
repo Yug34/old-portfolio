@@ -121,10 +121,12 @@
     transition: 0.5s;
     transform-style: preserve-3d;
     transform: translate3d(-50%, -50%, 50px) rotate(0deg) scale(0.9);
+    opacity: 0.5;
 }
 
 .container .box:hover .product {
     transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
+    opacity: 0.8;
 }
 
 .container .box:nth-child(1) .buy {
