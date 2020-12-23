@@ -20,7 +20,7 @@
   </head>
 
   <body>
-    <!------ Nav bar ---->
+<!------ Nav bar ---->
 <!--    <nav class="nav">-->
 <!--      <div class="container">-->
 <!--        <div class="logo">-->
@@ -64,7 +64,7 @@
 
           <div id="projects">
             <div class="bg-text">
-              <div class="container">
+              <div class="container" style="margin-top: 20vh">
                 <div class="box" id="box1">
                   <h2 class="name">AllBOT</h2>
                   <a href="https://github.com/Yug34/allBOT" class="buy">View source</a>
@@ -73,34 +73,18 @@
                 </div>
                 <div class="box" id="box2">
                   <h2 class="name">Stupid Blog</h2>
-                  <a href="https://github.com/Yug34/allBOT" class="buy">View source</a>
+                  <a href="https://github.com/Yug34/stupid-blog" class="buy">View source</a>
                   <div class="circle"></div>
                   <img src="images/blog.png" class="product" alt="Blog"/>
                 </div>
                 <div class="box" id="box3">
-                  <h2 class="name">AllBOT</h2>
-                  <a href="https://github.com/Yug34/allBOT" class="buy">View source</a>
+                  <h2 class="name">VisualWeather</h2>
+                  <a href="https://github.com/Yug34/VisualWeather" class="buy">View source</a>
                   <div class="circle"></div>
-                  <img src="images/discord.png" class="product" alt="discord"/>
+                  <img src="images/weather.png" class="product" alt="weather"/>
                 </div>
-                <div class="box" id="box4">
-                  <h2 class="name">AllBOT</h2>
-                  <a href="https://github.com/Yug34/allBOT" class="buy">View source</a>
-                  <div class="circle"></div>
-                  <img src="images/discord.png" class="product" alt="discord"/>
-                </div>
-                <div class="box" id="box5">
-                  <h2 class="name">Stupid Blog</h2>
-                  <a href="https://github.com/Yug34/allBOT" class="buy">View source</a>
-                  <div class="circle"></div>
-                  <img src="images/blog.png" class="product" alt="Blog"/>
-                </div>
-                <div class="box" id="box6">
-                  <h2 class="name">AllBOT</h2>
-                  <a href="https://github.com/Yug34/allBOT" class="buy">View source</a>
-                  <div class="circle"></div>
-                  <img src="images/discord.png" class="product" alt="discord"/>
-                </div>
+
+                <a href="https://github.com/Yug34" id="moreProjects">View More</a>
               </div>
             </div>
           </div>
@@ -127,7 +111,7 @@
       </div>
     </div>
 
-    <div id="wrapper">
+    <div id="wrapper" style="display: none">
       <div id="slidebar">
         <div class="slider">
           <div>Home</div>
@@ -140,7 +124,7 @@
     </div>
 
     <div id="nextArrow">
-      <a class="arrow-up" style="position: absolute; top: 45vh; margin-left: 90vw; transform: rotate(90deg);">
+      <a class="arrow-up" style="position: absolute; top: 43vh; margin-left: 90vw; transform: rotate(90deg);">
         <span class="left-arm"></span>
         <span class="right-arm"></span>
         <span class="arrow-slide"></span>
@@ -148,7 +132,7 @@
     </div>
 
     <div id="prevArrow">
-      <a class="arrow-up" style="position: absolute; top: 45vh; margin-left: 10vw; transform: rotate(-90deg);">
+      <a class="arrow-up" style="position: absolute; top: 43vh; margin-left: 10vw; transform: rotate(-90deg);">
         <span class="left-arm"></span>
         <span class="right-arm"></span>
         <span class="arrow-slide"></span>
@@ -181,6 +165,15 @@
       speed: 400,
       glare: true,
       "max-glare": 0.2,
+      gyroscope: true,
+    });
+
+    VanillaTilt.init(document.getElementById("moreProjects"), {
+      max: 30,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.1,
+      gyroscope: true,
     });
   </script>
 

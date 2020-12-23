@@ -64,15 +64,15 @@
 }
 
 #box3::before {
-    content: "";
+    content: "CHECK";
 }
 
 #box3::after {
-    content: "";
+    content: "IT OUT";
 }
 
 .container .box:hover::before, .container .box:hover::after {
-    opacity: 0.04;
+    opacity: 0.12;
 }
 
 .container .box .name {
@@ -152,6 +152,14 @@
 .container .box:nth-child(1) .buy {
     background: transparent;
     border: white 1px solid;
+}
+
+#moreProjects {
+    text-decoration: none;
+    color: white;
+    border: white 1px solid;
+    border-radius: 30px;
+    padding: 10px 25px;
 }
 
 /*.container .box:nth-child(1) .circle, .container .box:nth-child(1) .buy {*/
