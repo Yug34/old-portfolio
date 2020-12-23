@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-.container {
+.tiltContainer {
     margin: 10px auto;
     position: relative;
     display: flex;
@@ -11,7 +11,7 @@
     transform-style: preserve-3d;
 }
 
-.container .box {
+.tiltContainer .box {
     position: relative;
     width: 300px;
     height: 400px;
@@ -21,7 +21,7 @@
     transform-style: preserve-3d;
 }
 
-.container .box::before {
+.tiltContainer .box::before {
     /*content: 'NIKE';*/
     position: absolute;
     top: 20px;
@@ -34,7 +34,7 @@
     transition: 0.5s;
 }
 
-.container .box::after {
+.tiltContainer .box::after {
     /*content: 'SHOES';*/
     position: absolute;
     bottom: 20px;
@@ -71,11 +71,11 @@
     content: "RAININ'";
 }
 
-.container .box:hover::before, .container .box:hover::after {
+.tiltContainer .box:hover::before, .tiltContainer .box:hover::after {
     opacity: 0.12;
 }
 
-.container .box .name {
+.tiltContainer .box .name {
     position: absolute;
     top: 0;
     left: 0;
@@ -88,12 +88,12 @@
     z-index: 10;
 }
 
-.container .box:hover .name {
+.tiltContainer .box:hover .name {
     top: 40px;
     opacity: 1;
 }
 
-.container .box .buy {
+.tiltContainer .box .buy {
     margin-right: auto;
     margin-left: 0;
     position: absolute;
@@ -112,12 +112,12 @@
     z-index: 10;
 }
 
-.container .box:hover .buy {
+.tiltContainer .box:hover .buy {
     bottom: 30px;
     opacity: 1;
 }
 
-.container .box .circle {
+.tiltContainer .box .circle {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -132,7 +132,7 @@
     transform: translate3d(-50%, -50%, 50px);
 }
 
-.container .box .product {
+.tiltContainer .box .product {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -144,12 +144,12 @@
     opacity: 0.5;
 }
 
-.container .box:hover .product {
+.tiltContainer .box:hover .product {
     transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
     opacity: 0.8;
 }
 
-.container .box:nth-child(1) .buy {
+.tiltContainer .box:nth-child(1) .buy {
     background: transparent;
     border: white 1px solid;
 }
@@ -162,14 +162,14 @@
     padding: 10px 25px;
 }
 
-/*.container .box:nth-child(1) .circle, .container .box:nth-child(1) .buy {*/
+/*.tiltContainer .box:nth-child(1) .circle, .tiltContainer .box:nth-child(1) .buy {*/
 /*    background: #ffffff;*/
 /*}*/
 
-/*.container .box:nth-child(2) .circle, .container .box:nth-child(2) .buy {*/
+/*.tiltContainer .box:nth-child(2) .circle, .tiltContainer .box:nth-child(2) .buy {*/
 /*    background: #9bdc28;*/
 /*}*/
 
-/*.container .box:nth-child(3) .circle, .container .box:nth-child(3) .buy {*/
+/*.tiltContainer .box:nth-child(3) .circle, .tiltContainer .box:nth-child(3) .buy {*/
 /*    background: #fb4b4f;*/
 /*}*/
