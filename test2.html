@@ -1,18 +1,51 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="css/projects.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /*.progress {*/
+        /*    height: 3px;*/
+        /*}*/
+
+        /*.progress > svg {*/
+        /*    height: 100%;*/
+        /*    display: block;*/
+        /*}*/
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="box" id="box1">
-            <h2 class="name">AllBOT</h2>
-            <a href="#" class="buy">View source</a>
-            <div class="circle"></div>
-            <img src="images/discord.png" href="#" class="product"/>
-        </div>
-    </div>
+<div id="progress"></div>
+
+<script src="src/progressbar.js"></script>
 </body>
+<script>
+  window.onload = function onLoad() {
+    var bar = new ProgressBar.Line("#progress", {
+      strokeWidth: 1,
+      easing: 'easeInOut',
+      duration: 1400,
+      color: '#FFEA82',
+      trailColor: '#eee',
+      trailWidth: 0.5,
+      svgStyle: {
+        width: '90%',
+        height: '4px',
+        "border-radius": "2px",
+        "margin-top": "20px",
+      },
+      from: {color: '#000'},
+      to: {color: '#fff'},
+      step: (state, bar) => {
+        bar.path.setAttribute('stroke', state.color);
+      }
+    });
+
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+  };
+
+
+
+</script>
 </html>
