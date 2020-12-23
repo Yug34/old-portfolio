@@ -64,11 +64,11 @@
 }
 
 #box3::before {
-    content: "CHECK";
+    content: "IT'S";
 }
 
 #box3::after {
-    content: "IT OUT";
+    content: "RAININ'";
 }
 
 .container .box:hover::before, .container .box:hover::after {
