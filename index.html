@@ -90,9 +90,56 @@
 
           <div id="skills">
             <div class="bg-text">
+              <div id="jsSkill">
+                <div style="">
+                  <img src="images/javascript.png" alt="javascript" style="width: 32px; display: inline-block">
+                  <p style="">Javascript</p>
+                </div>
+                <div id="jsProgress"></div>
+              </div>
 
+              <div id="reactSkill">
+                <div>
+                  <img src="images/react.png" alt="react" style="width: 32px; display: inline-block; margin-top: 20px">
+                  <p style="">React.js</p>
+                </div>
+                <div id="reactProgress"></div>
+              </div>
+
+              <div id="djangoSkill">
+                <div>
+                  <img src="images/django.png" alt="django" style="width: 32px; display: inline-block; margin-top: 20px">
+                  <p style="">Django</p>
+                </div>
+                <div id="djangoProgress"></div>
+              </div>
+
+              <div id="cppSkill">
+                <div>
+                  <img src="images/c++.png" alt="c++" style="width: 32px; display: inline-block; margin-top: 20px">
+                  <p style="">C++</p>
+                </div>
+                <div id="cppProgress"></div>
+              </div>
+
+              <div id="pythonSkill">
+                <div>
+                  <img src="images/python.png" alt="python" style="width: 32px; display: inline-block; margin-top: 20px">
+                  <p style="">Python</p>
+                </div>
+                <div id="pythonProgress"></div>
+              </div>
             </div>
           </div>
+
+<!--
+logo
+AMP
+schema.org
+photo loading speed / smush and all
+link search console
+vanta.js
+-->
 
 
           <div id="education">
@@ -205,7 +252,6 @@
   ></script>
   <script src="src/vantaWaves.js"></script>
   <script src="src/typed.js"></script>
-  <script src="src/index.js"></script>
   <script>
     $(document).ready(() => {
       $('#slideContainer .slideshow').slick({
@@ -226,5 +272,127 @@
         prevArrow: document.getElementById('prevArrow'),
       });
     });
+  </script>
+  <script src="src/progressbar.js"></script>
+  <script>
+  // TODO: Implement proper logic here
+  // document.getElementById("prevArrow").addEventListener("click", () => {
+  //   ProgressCounter--;
+  // })
+  let ProgressCounter = 0;
+  document.getElementById("nextArrow").addEventListener("click", () => {
+    ProgressCounter++;
+    if(ProgressCounter === 2) {
+      let javascriptBar = new ProgressBar.Line("#jsProgress", {
+        strokeWidth: 1,
+        easing: 'easeInOut',
+        duration: 1400,
+        trailColor: '#9a9a9a',
+        trailWidth: 0.2,
+        svgStyle: {
+          width: '50%',
+          height: '4px',
+          "border-radius": "2px",
+          "margin-top": "20px",
+          "display": "inline-block"
+        },
+        from: {color: '#000'},
+        to: {color: '#fff'},
+        step: (state, bar) => {
+          bar.path.setAttribute('stroke', state.color);
+        }
+      });
+
+      javascriptBar.animate(1.0);  // Number from 0.0 to 1.0
+
+      let reactBar = new ProgressBar.Line("#reactProgress", {
+        strokeWidth: 1,
+        easing: 'easeInOut',
+        duration: 1400,
+        trailColor: '#9a9a9a',
+        trailWidth: 0.2,
+        svgStyle: {
+          width: '50%',
+          height: '4px',
+          "border-radius": "2px",
+          "margin-top": "20px",
+          "display": "inline-block"
+        },
+        from: {color: '#000'},
+        to: {color: '#fff'},
+        step: (state, bar) => {
+          bar.path.setAttribute('stroke', state.color);
+        }
+      });
+
+      reactBar.animate(0.8);  // Number from 0.0 to 1.0
+
+      let djangoBar = new ProgressBar.Line("#djangoProgress", {
+        strokeWidth: 1,
+        easing: 'easeInOut',
+        duration: 1400,
+        trailColor: '#9a9a9a',
+        trailWidth: 0.2,
+        svgStyle: {
+          width: '50%',
+          height: '4px',
+          "border-radius": "2px",
+          "margin-top": "20px",
+          "display": "inline-block"
+        },
+        from: {color: '#000'},
+        to: {color: '#fff'},
+        step: (state, bar) => {
+          bar.path.setAttribute('stroke', state.color);
+        }
+      });
+
+      djangoBar.animate(0.7);  // Number from 0.0 to 1.0
+
+      let cppBar = new ProgressBar.Line("#cppProgress", {
+        strokeWidth: 1,
+        easing: 'easeInOut',
+        duration: 1400,
+        trailColor: '#9a9a9a',
+        trailWidth: 0.2,
+        svgStyle: {
+          width: '50%',
+          height: '4px',
+          "border-radius": "2px",
+          "margin-top": "20px",
+          "display": "inline-block"
+        },
+        from: {color: '#000'},
+        to: {color: '#fff'},
+        step: (state, bar) => {
+          bar.path.setAttribute('stroke', state.color);
+        }
+      });
+
+      cppBar.animate(0.9);  // Number from 0.0 to 1.0
+
+      let pythonBar = new ProgressBar.Line("#pythonProgress", {
+        strokeWidth: 1,
+        easing: 'easeInOut',
+        duration: 1400,
+        trailColor: '#9a9a9a',
+        trailWidth: 0.2,
+        svgStyle: {
+          width: '50%',
+          height: '4px',
+          "border-radius": "2px",
+          "margin-top": "20px",
+          "display": "inline-block"
+        },
+        from: {color: '#000'},
+        to: {color: '#fff'},
+        step: (state, bar) => {
+          bar.path.setAttribute('stroke', state.color);
+        }
+      });
+
+      pythonBar.animate(0.9);  // Number from 0.0 to 1.0
+    }
+  });
   </script>
 </html>
