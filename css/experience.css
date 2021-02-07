@@ -1,0 +1,20 @@
+.experienceContainer .experience {
+    margin-top: 25vh;
+}
+
+.experienceContainer .experience .expImageContainer {
+    width: fit-content;
+    align-items: center;
+    align-content: center;
+    display: inline-block;
+}
+
+.experienceContainer .experience .expImageContainer .experienceImage {
+    width: 100px;
+    height: 100px;
+
+}
+
+.experienceContainer .experience .experienceName {
+    display: block;
+}
