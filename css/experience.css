@@ -1,20 +1,26 @@
-.experienceContainer .experience {
-    margin-top: 25vh;
+.experienceContainer {
+    height: inherit;
+    width: inherit;
+    overflow: hidden;
 }
 
-.experienceContainer .experience .expImageContainer {
+.experienceContainer .experienceCard {
+    display: block;
+}
+
+.experienceContainer .experienceCard .expImageContainer {
     width: fit-content;
     align-items: center;
     align-content: center;
     display: inline-block;
 }
 
-.experienceContainer .experience .expImageContainer .experienceImage {
+.experienceContainer .experienceCard .expImageContainer .experienceImage {
     width: 100px;
     height: 100px;
-
 }
 
-.experienceContainer .experience .experienceName {
+.experienceContainer .experienceCard .experienceName {
     display: block;
+    font-size: 20px;
 }

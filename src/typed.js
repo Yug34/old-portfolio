@@ -5,7 +5,7 @@ let name = new Typed("#typeName", {
 });
 
 let description = new Typed("#typeDescription", {
-  strings: ["Full-Stack Developer", "Machine Learning Guy", "Research Assistant"],
+  strings: ["Full-Stack Developer", "Research Assistant", "Machine Learning Guy"],
   typeSpeed: 50,
   startDelay: 500,
   cursorChar: "|",

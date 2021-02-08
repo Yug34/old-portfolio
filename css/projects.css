@@ -98,7 +98,27 @@
     margin-left: 0;
     position: absolute;
     bottom: 0;
-    left: 50px;
+    /*left: 50px;*/
+    left: 70px;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, 0, 75px);
+    color: #fff;
+    background: transparent;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: white 1px solid;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+.tiltContainer .box .sell {
+    margin-right: 0;
+    margin-left: auto;
+    position: absolute;
+    bottom: 0;
+    right: -60px;
     transform-style: preserve-3d;
     transform: translate3d(-50%, 0, 75px);
     color: #fff;
@@ -113,6 +133,11 @@
 }
 
 .tiltContainer .box:hover .buy {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.tiltContainer .box:hover .sell {
     bottom: 30px;
     opacity: 1;
 }
@@ -150,6 +175,11 @@
 }
 
 .tiltContainer .box:nth-child(1) .buy {
+    background: transparent;
+    border: white 1px solid;
+}
+
+.tiltContainer .box:nth-child(1) .sell {
     background: transparent;
     border: white 1px solid;
 }
