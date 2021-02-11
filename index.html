@@ -185,18 +185,22 @@
     </div>
 
     <div id="nextArrow">
-      <a class="arrow-up" style="position: absolute; top: 43vh; margin-left: 90vw; transform: rotate(90deg);">
-        <span class="left-arm"></span>
-        <span class="right-arm"></span>
-        <span class="arrow-slide"></span>
+      <a class="arrow-up" style="top: 43vh; margin-left: 90vw; transform: rotate(90deg);">
+        <div id="nextArrowContain">
+          <span class="left-arm"></span>
+          <span class="right-arm"></span>
+          <span class="arrow-slide"></span>
+        </div>
       </a>
     </div>
 
     <div id="prevArrow">
-      <a class="arrow-up" style="position: absolute; top: 43vh; margin-left: 10vw; transform: rotate(-90deg);">
-        <span class="left-arm"></span>
-        <span class="right-arm"></span>
-        <span class="arrow-slide"></span>
+      <a class="arrow-up" style="top: 43vh; margin-left: 10vw; transform: rotate(-90deg);">
+        <div id="prevArrowContain">
+          <span class="left-arm"></span>
+          <span class="right-arm"></span>
+          <span class="arrow-slide"></span>
+        </div>
       </a>
     </div>
 
@@ -243,7 +247,7 @@
       glare: true,
       "max-glare": 0.1,
       gyroscope: true,
-    })
+    });
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>

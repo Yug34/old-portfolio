@@ -166,11 +166,7 @@
     transform: translateY(200%);
 }
 
-.scroll-up {
-    position: fixed;
-    margin-left: -100px;
-    top: 200px;
-}
+
 
 .arrow-up {
     position: fixed;

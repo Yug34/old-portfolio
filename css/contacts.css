@@ -1,0 +1,11 @@
+.contactCard {
+    display: block;
+    height: 95vh;
+    background: transparent;
+    border: white 1px solid;
+}
+
+.contactCard .header {
+
+}
+
