@@ -2,7 +2,7 @@
 
 ### Note to the folks at Atlan:
 
-My old portfolio!
+My (incomplete :c) old portfolio!
 
 <br>
 
